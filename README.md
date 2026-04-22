@@ -4,8 +4,8 @@ A mini online bookstore app that demonstrates a complete **frontend + backend** 
 
 It supports book browsing, book details, cart management, checkout simulation, authentication, and reviews.
 
-> Note: The backend uses **in-memory data structures**, so **no database setup** is required.
-> live link : https://glowlogics-book-store.onrender.com
+> Note: The backend uses **in-memory data structures**, so **no database setup** is required.<br>
+> live link : https://glowlogics-book-store.onrender.com<br>
 > github clone link : https://github.com/kupendrav/Glowlogics-Book-Store.git
 
 ---
