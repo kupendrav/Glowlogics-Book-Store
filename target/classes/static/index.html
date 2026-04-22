@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowlogics Book Store | Home</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+    <a class="logo" href="index.html">Glowlogics Book Store</a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-and-conditions.html">Terms</a>
+    </nav>
+    <div class="header-actions">
+        <a class="nav-cart" href="cart.html" aria-label="Bag">
+            <span class="nav-cart-icon" aria-hidden="true">&#128717;</span>
+            <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+        <a id="authCta" class="btn-outline" href="auth.html">Login / Signup</a>
+        <button id="logoutBtn" class="btn-ghost hidden" type="button">Logout</button>
+    </div>
+</header>
+
+<main>
+    <section class="hero reveal">
+        <div class="hero-grid">
+            <div class="hero-left">
+                <p class="eyebrow">Welcome To Glowlogics Book Store</p>
+                <h1>Half Price Store</h1>
+                <p class="hero-subtitle">Your next great read at up to 50% off.</p>
+
+                <div class="search-wrap">
+                    <input id="searchInput" type="search" placeholder="Search books by title...">
+                </div>
+            </div>
+            <div class="hero-right">
+                <article class="sale-tag-card">
+                    <h3>Sale 50% Off</h3>
+                    <p>Limited-time picks for mystery, biographies, romance, and self-help lovers.</p>
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=800&q=80" alt="Book stack on sale">
+                    <span class="floating-badge">Deals refreshed daily</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="discover-layout reveal">
+        <aside class="category-panel">
+            <div class="category-panel-head">
+                <h2>Browse Categories</h2>
+                <div class="arrow-controls">
+                    <button id="categoryArrowLeft" class="arrow-btn" type="button" aria-label="Scroll categories left">&#8592;</button>
+                    <button id="categoryArrowRight" class="arrow-btn" type="button" aria-label="Scroll categories right">&#8594;</button>
+                </div>
+            </div>
+            <div class="category-rail" id="categoryFilters"></div>
+                <h1>"Today a reader, tomorrow a leader."<br>~ Glowlogics</h1>
+
+        </aside>
+
+        <div class="books-panel">
+            <div class="section-heading compact">
+                <h2 id="catalogTitle">Category Picks</h2>
+                <p id="bookResultCount"></p>
+            </div>
+
+            <div class="arrow-controls books-arrow-controls">
+                <button id="booksArrowLeft" class="arrow-btn" type="button" aria-label="Scroll books left">&#8592;</button>
+                <button id="booksArrowRight" class="arrow-btn" type="button" aria-label="Scroll books right">&#8594;</button>
+            </div>
+
+            <div id="booksCarousel" class="books-carousel"></div>
+        </div>
+
+        <aside class="category-gif-panel" aria-label="Reading mood animation">
+            <img class="category-gif-image" src="images/mohitsaini155-boy-1970.gif" alt="Boy reading a book">
+        </aside>
+    </section>
+
+    <section class="info-grid reveal">
+        <a class="info-card" href="about.html">
+            <h3>About Us</h3>
+            <p>Discover our mission, reader community, and what makes Glowlogics Book Store special.</p>
+        </a>
+        <a class="info-card" href="contact.html">
+            <h3>Contact Us</h3>
+            <p>Need help? Reach us by phone, email, or visit our office in Bengaluru.</p>
+        </a>
+        <a class="info-card" href="privacy-policy.html">
+            <h3>Privacy Policy</h3>
+            <p>Learn how we collect, protect, and responsibly use your personal information.</p>
+        </a>
+        <a class="info-card" href="terms-and-conditions.html">
+            <h3>Terms And Conditions</h3>
+            <p>Read the rules and terms that govern your use of this website.</p>
+        </a>
+    </section>
+</main>
+
+<footer class="footer">
+    Glowlogics Book Store | Read more. Save more. Smile more.
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

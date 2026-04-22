@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowlogics Book Store | Login and Signup</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+    <a class="logo" href="index.html">Glowlogics Book Store</a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-and-conditions.html">Terms</a>
+    </nav>
+    <div class="header-actions">
+        <a class="nav-cart" href="cart.html" aria-label="Bag">
+            <span class="nav-cart-icon" aria-hidden="true">&#128717;</span>
+            <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+        <a id="authCta" class="btn-outline" href="auth.html">Login / Signup</a>
+        <button id="logoutBtn" class="btn-ghost hidden" type="button">Logout</button>
+    </div>
+</header>
+
+<main class="auth-shell">
+    <section class="auth-card reveal">
+        <aside class="auth-visual">
+            <h1>Welcome Back Reader</h1>
+            <p>Login or sign up to add books to your cart, checkout quickly, and post reviews.</p>
+            <p>Demo account: demo@glowlogics.in / password123</p>
+        </aside>
+
+        <article class="auth-form-wrap">
+            <div class="tab-row">
+                <button class="tab-btn active" type="button" data-tab="login">Login</button>
+                <button class="tab-btn" type="button" data-tab="signup">Signup</button>
+            </div>
+
+            <form id="loginForm" class="auth-form active">
+                <label for="loginEmail">Email</label>
+                <input id="loginEmail" type="email" required>
+
+                <label for="loginPassword">Password</label>
+                <input id="loginPassword" type="password" required minlength="6">
+
+                <button class="btn" type="submit">Login</button>
+            </form>
+
+            <form id="signupForm" class="auth-form">
+                <label for="signupUsername">Username</label>
+                <input id="signupUsername" type="text" required minlength="2" maxlength="30">
+
+                <label for="signupEmail">Email</label>
+                <input id="signupEmail" type="email" required>
+
+                <label for="signupPassword">Password</label>
+                <input id="signupPassword" type="password" required minlength="6">
+
+                <button class="btn" type="submit">Create Account</button>
+            </form>
+        </article>
+    </section>
+</main>
+
+<footer class="footer">
+    Glowlogics Book Store | Simple and secure authentication.
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

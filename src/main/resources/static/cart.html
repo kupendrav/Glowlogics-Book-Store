@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowlogics Book Store | Cart</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+    <a class="logo" href="index.html">Glowlogics Book Store</a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-and-conditions.html">Terms</a>
+    </nav>
+    <div class="header-actions">
+        <a class="nav-cart" href="cart.html" aria-label="Bag">
+            <span class="nav-cart-icon" aria-hidden="true">&#128717;</span>
+            <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+        <a id="authCta" class="btn-outline" href="auth.html">Login / Signup</a>
+        <button id="logoutBtn" class="btn-ghost hidden" type="button">Logout</button>
+    </div>
+</header>
+
+<main>
+    <h1 class="page-title reveal">Your Cart</h1>
+    <p class="subtext reveal">Review items, remove books, and proceed to checkout.</p>
+
+    <section class="cart-layout reveal">
+        <div id="cartAuthMessage" class="empty-state hidden"></div>
+
+        <div class="cart-grid" id="cartGrid">
+            <div>
+                <h2>Added Books</h2>
+                <div id="cartItemsList"></div>
+            </div>
+
+            <aside class="panel">
+                <h2>Order Summary</h2>
+                <div id="cartSummary" class="summary-list"></div>
+                <a id="checkoutButton" class="btn" href="checkout.html">Proceed To Checkout</a>
+            </aside>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    Glowlogics Book Store | Smooth cart management with instant price updates.
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowlogics Book Store | Checkout</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+    <a class="logo" href="index.html">Glowlogics Book Store</a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-and-conditions.html">Terms</a>
+    </nav>
+    <div class="header-actions">
+        <a class="nav-cart" href="cart.html" aria-label="Bag">
+            <span class="nav-cart-icon" aria-hidden="true">&#128717;</span>
+            <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+        <a id="authCta" class="btn-outline" href="auth.html">Login / Signup</a>
+        <button id="logoutBtn" class="btn-ghost hidden" type="button">Logout</button>
+    </div>
+</header>
+
+<main>
+    <h1 class="page-title reveal">Checkout</h1>
+    <p class="subtext reveal">Complete your order with one final step.</p>
+
+    <section class="checkout-layout reveal">
+        <div id="checkoutAuthMessage" class="empty-state hidden"></div>
+
+        <div class="checkout-grid" id="checkoutGrid">
+            <article class="panel">
+                <h2>Order Items</h2>
+                <div id="checkoutItemsList"></div>
+            </article>
+
+            <aside class="panel">
+                <h2>Customer Details</h2>
+                <form id="checkoutForm" class="auth-form active">
+                    <label for="fullName">Full Name</label>
+                    <input id="fullName" name="fullName" type="text" required minlength="2">
+
+                    <label for="email">Email Address</label>
+                    <input id="email" name="email" type="email" required>
+
+                    <label for="address">Shipping Address</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+
+                    <button class="btn" type="submit" id="placeOrderButton">Place Order</button>
+                </form>
+
+                <div id="checkoutConfirmation" class="empty-state hidden"></div>
+            </aside>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    Glowlogics Book Store | Secure and simple checkout experience.
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>
