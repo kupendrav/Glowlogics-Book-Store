@@ -1,0 +1,6 @@
+target
+.git
+.github
+README.md
+output.html
+mvn.cmd
