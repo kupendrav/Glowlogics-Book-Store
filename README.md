@@ -31,6 +31,51 @@ It supports book browsing, book details, cart management, checkout simulation, a
 
 ---
 
+## Architecture Design
+
+### Application Flow
+
+```mermaid
+flowchart LR
+    User((User))
+    Browser[Browser UI<br/>HTML + CSS + Vanilla JS]
+    Static[Spring Boot Static Resources]
+    Controllers[Spring MVC Controllers]
+    Services[Business Services]
+    Memory[(In-memory Data Store)]
+
+    User --> Browser
+    Browser --> Static
+    Browser -->|HTTP requests| Controllers
+    Controllers --> Services
+    Services --> Memory
+    Memory --> Services
+    Services --> Controllers
+    Controllers -->|JSON / HTML response| Browser
+```
+
+### Venn-style Responsibility Map
+
+```mermaid
+flowchart TB
+    subgraph Frontend["Frontend Circle"]
+        UI[Book listing<br/>Details page<br/>Cart screen<br/>Checkout page]
+    end
+
+    subgraph Shared["Overlap / App Workflow"]
+        API[REST contract<br/>Validation messages<br/>Session-style user flow]
+    end
+
+    subgraph Backend["Backend Circle"]
+        MVC[Spring MVC routes<br/>Auth APIs<br/>Cart and review logic<br/>In-memory storage]
+    end
+
+    UI <--> API
+    API <--> MVC
+```
+
+---
+
 ## ✅ Prerequisites
 
 - **Java 17+**
